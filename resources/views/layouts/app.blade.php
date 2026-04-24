@@ -261,6 +261,15 @@
                     </a>
                 </li>
             </ul>
+            <div class="navbar-nav ms-auto">
+            @auth
+                <span class="nav-link text-white">Halo, {{ Auth::user()->name }}</span>
+                <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                    @csrf
+                    <button type="submit" class="btn btn-link nav-link">Logout</button>
+                </form>
+            @endauth
+        </div>
         </div>
     </div>
 </nav>
