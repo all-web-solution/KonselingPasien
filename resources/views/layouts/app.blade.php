@@ -212,18 +212,51 @@
         }
         
         @media print {
-            .navbar, footer, .no-print, .btn, .aksi-column {
+            /* Sembunyikan semua elemen navigasi dan tombol */
+            .navbar, footer, .no-print, .btn, .card-header, .aksi-column, .alert {
                 display: none !important;
             }
-            .card {
-                box-shadow: none;
-            }
+
+            /* Hilangkan background gradient dan warna body */
             body {
-                background: white;
+                background: white !important;
+                -webkit-print-color-adjust: exact;
             }
+
+            /* Hilangkan shadow dan border pada card agar bersih */
+            .card {
+                border: none !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
             .container {
-                width: 100%;
-                max-width: none;
+                width: 100% !important;
+                max-width: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Tampilkan judul laporan secara eksplisit */
+            .d-print-block {
+                display: block !important;
+            }
+
+            /* Styling tabel untuk cetak agar garisnya jelas */
+            .table {
+                width: 100% !important;
+                border: 1px solid #dee2e6 !important;
+            }
+            
+            .table thead th {
+                background-color: #f8f9fa !important;
+                color: black !important;
+                border: 1px solid #dee2e6 !important;
+            }
+
+            .table td {
+                border: 1px solid #dee2e6 !important;
             }
         }
     </style>

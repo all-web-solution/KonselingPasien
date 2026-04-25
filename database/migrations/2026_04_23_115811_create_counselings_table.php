@@ -17,7 +17,7 @@ return new class extends Migration
 
             // Data dokter & resep (text semua)
             $table->string('nama_dokter');
-            $table->string('nama_obat');
+            // $table->string('nama_obat');
             // $table->string('dosis_dan_aturan_pakai');
             // $table->integer('jumlah_obat');
             // $table->string('lama_terapi');

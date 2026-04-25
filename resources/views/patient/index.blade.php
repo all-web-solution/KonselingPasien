@@ -4,9 +4,7 @@
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
         <span><i class="fas fa-users"></i> Data Master Pasien</span>
-        <button onclick="window.print()" class="btn btn-sm btn-light no-print">
-            <i class="fas fa-print"></i> Cetak Laporan
-        </button>
+        
     </div>
     <div class="card-body">
         <div class="d-flex justify-content-between align-items-center mb-4 no-print">
@@ -25,10 +23,13 @@
                         <a href="{{ route('patient.index') }}" class="btn btn-secondary ms-1">Reset</a>
                     @endif
                 </form>
-                
+                <button onclick="window.print()" class="btn btn-sm btn-warning no-print">
+                    <i class="fas fa-print"></i> Cetak Laporan
+                </button>
                 <a href="{{ route('patient.create') }}" class="btn btn-success">
                     <i class="fas fa-plus"></i> Tambah Pasien
                 </a>
+                
             </div>
         </div>
 

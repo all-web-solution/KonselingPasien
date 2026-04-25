@@ -83,4 +83,16 @@ class PatientController extends Controller
         Patient::findOrFail($id)->delete();
         return redirect()->route('patient.index')->with('success', 'Data pasien berhasil dihapus!');
     }
+
+    public function cetakPdf()
+    {
+        // Ambil semua data pasien
+        $patients = Patient::orderBy('nama_pasien')->get();
+
+        // Load view khusus untuk PDF dengan membawa data pasien
+        $pdf = Pdf::loadView('patient.pdf', compact('patients'));
+
+        // stream() agar PDF terbuka di tab baru. Gunakan download() jika ingin langsung terunduh.
+        return $pdf->stream('Laporan_Data_Pasien.pdf');
+    }
 }
