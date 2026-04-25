@@ -42,26 +42,13 @@
                     @error('nama_dokter') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
                 
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Nama Obat <span class="text-danger">*</span></label>
-                    <input type="text" name="nama_obat" class="form-control @error('nama_obat') is-invalid @enderror" required>
-                    @error('nama_obat') <small class="text-danger">{{ $message }}</small> @enderror
+                <div class="mb-3">
+                    <label class="form-label">Nama Obat & Aturan Pakai</label>
+                    <textarea name="obat_dan_aturan_pakai" class="form-control" rows="3" placeholder="Contoh: Paracetamol 500mg - 3x sehari sesudah makan" required>{{ old('obat_dan_aturan_pakai') }}</textarea>
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <label class="form-label">Dosis & Aturan Pakai <span class="text-danger">*</span></label>
-                    <input type="text" name="dosis_dan_aturan_pakai" class="form-control @error('dosis_dan_aturan_pakai') is-invalid @enderror" placeholder="Contoh: 3x1 tablet" required>
-                    @error('dosis_dan_aturan_pakai') <small class="text-danger">{{ $message }}</small> @enderror
-                </div>
-                
-                <div class="col-md-4 mb-3">
-                    <label class="form-label">Jumlah Obat <span class="text-danger">*</span></label>
-                    <input type="number" name="jumlah_obat" class="form-control @error('jumlah_obat') is-invalid @enderror" required>
-                    @error('jumlah_obat') <small class="text-danger">{{ $message }}</small> @enderror
-                </div>
-                
                 <div class="col-md-4 mb-3">
                     <label class="form-label">Lama Terapi <span class="text-danger">*</span></label>
                     <input type="text" name="lama_terapi" class="form-control @error('lama_terapi') is-invalid @enderror" placeholder="Contoh: 7 hari / 3 bulan" required>

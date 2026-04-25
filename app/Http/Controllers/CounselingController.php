@@ -48,9 +48,7 @@ class CounselingController extends Controller
         $request->validate([
             'patient_id' => 'required|exists:patients,id',
             'nama_dokter' => 'required',
-            'nama_obat' => 'required',
-            'dosis_dan_aturan_pakai' => 'required',
-            'jumlah_obat' => 'required|numeric',
+            'obat_dan_aturan_pakai' => 'required',
             'lama_terapi' => 'required',
             'diagnosa' => 'required',
             'tanggal_konseling' => 'required|date',

@@ -78,21 +78,15 @@
                     <div class="info-label">
                         <i class="fas fa-capsules"></i> NAMA OBAT
                     </div>
-                    <div class="info-value">{{ $counseling->nama_obat }}</div>
+                    <div class="info-value">{{ $counseling->obat_dan_aturan_pakai }}</div>
                 </div>
+                
                 
                 <div class="info-card">
                     <div class="info-label">
-                        <i class="fas fa-prescription-bottle"></i> DOSIS & ATURAN PAKAI
+                        <i class="fas fa-boxes"></i> LAMA TERAPI
                     </div>
-                    <div class="info-value">{{ $counseling->dosis_dan_aturan_pakai }}</div>
-                </div>
-                
-                <div class="info-card">
-                    <div class="info-label">
-                        <i class="fas fa-boxes"></i> JUMLAH OBAT & LAMA TERAPI
-                    </div>
-                    <div class="info-value">{{ $counseling->jumlah_obat }} butir / {{ $counseling->lama_terapi }}</div>
+                    <div class="info-value">{{ $counseling->lama_terapi }}</div>
                 </div>
                 
                 <div class="info-card">
